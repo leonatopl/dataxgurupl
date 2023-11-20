@@ -1,0 +1,10 @@
+---
+title: "Welcome To My Blog"
+author: "paloma leonato"
+date: "2023-11-16"
+categories: [R]
+---
+
+Welcome to my Blog! I hope you will find it interesting.
+
+![](picblog2.jpg)

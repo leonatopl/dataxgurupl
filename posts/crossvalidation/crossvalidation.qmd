@@ -1,0 +1,27 @@
+---
+title: "Cross Validation"
+author: "paloma leonato"
+date: "2023-11-19"
+categories: [R, regression, cross validation]
+image: "team_work.jpg"
+---
+
+## Cross validation
+
+```{r, echo=TRUE}
+
+library(caret)
+
+mydata <- ISLR2::Portfolio
+
+set.seed(1234)
+control_kfold <- trainControl(method = "cv", number=10)
+
+
+kfold <-train(Y~X , data = mydata, method = "lm", trControl = control_kfold)
+
+kfold$results
+
+```
+
+This is not the best sample. But gets you the basics for the cross-validation. The training data is divided into 10 folds. Every time the model is created with 9 folds, one of the folds is left out to estimate the validation of the model. Once the model is created, you can validate your results with the model\$results. In this case kfold\$results.

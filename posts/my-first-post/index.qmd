@@ -1,0 +1,52 @@
+---
+title: "Post Estimation Diagnostics"
+author: "paloma leonato"
+date: "2023-11-19"
+categories: [R, regression, analysis]
+image: "pic_anal.jpg"
+---
+
+This is a post with executable code.
+
+```{r, echo=TRUE}
+
+library(ISLR2)
+
+mydata <- ISLR2::Portfolio
+
+model <- lm(Y~X, data=mydata)
+
+summary(model)
+```
+
+We can see that the X variable is significant. Notice the three start to the right.
+
+Let's now plot the relation between these two variables.
+
+```{r, echo=TRUE}
+
+plot(mydata$X,mydata$Y)
+
+```
+
+There is a positive correlation between Y, the dependent variable, and X, the independent variable.
+
+Now let's evaluate if the model is a valid model
+
+```{r, echo=TRUE}
+
+library(tidyverse)
+
+par(mfrow = c(2,2))
+
+plot(model)
+
+```
+
+First, we call the library tidyverse which has this plot command to evaluate the feasibility of our model.
+
+The top right graph shows that the residuals vs fitted values are randomly distributed, with a minimal deviation from the horizontal line.
+
+The next graph to the right is the Q-Q plot. Q_Q plot checks the linearity of the data. If the points are all close to the line that is a good validation of the model.
+
+The other two graphs will show and highlight the outliers and high-leverage points.

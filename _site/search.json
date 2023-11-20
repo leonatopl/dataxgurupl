@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "paloma leonato",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "paloma leonato",
+    "section": "",
+    "text": "Cross Validation\n\n\n\n\n\n\n\nR\n\n\nregression\n\n\ncross validation\n\n\n\n\n\n\n\n\n\n\n\nNov 19, 2023\n\n\npaloma leonato\n\n\n\n\n\n\n  \n\n\n\n\nPost Estimation Diagnostics\n\n\n\n\n\n\n\nR\n\n\nregression\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nNov 19, 2023\n\n\npaloma leonato\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nR\n\n\n\n\n\n\n\n\n\n\n\nNov 16, 2023\n\n\npaloma leonato\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/crossvalidation/crossvalidation.html",
+    "href": "posts/crossvalidation/crossvalidation.html",
+    "title": "Cross Validation",
+    "section": "",
+    "text": "library(caret)\n\nLoading required package: ggplot2\n\n\nLoading required package: lattice\n\nmydata &lt;- ISLR2::Portfolio\n\nset.seed(1234)\ncontrol_kfold &lt;- trainControl(method = \"cv\", number=10)\n\n\nkfold &lt;-train(Y~X , data = mydata, method = \"lm\", trControl = control_kfold)\n\nkfold$results\n\n  intercept      RMSE Rsquared       MAE    RMSESD RsquaredSD     MAESD\n1      TRUE 0.9544015 0.319766 0.7846862 0.2192737  0.2138706 0.1840715\n\n\nThis is not the best sample. But gets you the basics for the cross-validation. The training data is divided into 10 folds. Every time the model is created with 9 folds, one of the folds is left out to estimate the validation of the model. Once the model is created, you can validate your results with the model$results. In this case kfold$results."
+  },
+  {
+    "objectID": "posts/crossvalidation/crossvalidation.html#cross-validation",
+    "href": "posts/crossvalidation/crossvalidation.html#cross-validation",
+    "title": "Cross Validation",
+    "section": "",
+    "text": "library(caret)\n\nLoading required package: ggplot2\n\n\nLoading required package: lattice\n\nmydata &lt;- ISLR2::Portfolio\n\nset.seed(1234)\ncontrol_kfold &lt;- trainControl(method = \"cv\", number=10)\n\n\nkfold &lt;-train(Y~X , data = mydata, method = \"lm\", trControl = control_kfold)\n\nkfold$results\n\n  intercept      RMSE Rsquared       MAE    RMSESD RsquaredSD     MAESD\n1      TRUE 0.9544015 0.319766 0.7846862 0.2192737  0.2138706 0.1840715\n\n\nThis is not the best sample. But gets you the basics for the cross-validation. The training data is divided into 10 folds. Every time the model is created with 9 folds, one of the folds is left out to estimate the validation of the model. Once the model is created, you can validate your results with the model$results. In this case kfold$results."
+  },
+  {
+    "objectID": "posts/my-first-post/index.html",
+    "href": "posts/my-first-post/index.html",
+    "title": "Post Estimation Diagnostics",
+    "section": "",
+    "text": "This is a post with executable code.\n\nlibrary(ISLR2)\n\nmydata &lt;- ISLR2::Portfolio\n\nmodel &lt;- lm(Y~X, data=mydata)\n\nsummary(model)\n\n\nCall:\nlm(formula = Y ~ X, data = mydata)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-2.44650 -0.65599 -0.02448  0.53944  2.33072 \n\nCoefficients:\n            Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept) -0.05414    0.09877  -0.548    0.585    \nX            0.55497    0.09319   5.955 4.07e-08 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.9851 on 98 degrees of freedom\nMultiple R-squared:  0.2657,    Adjusted R-squared:  0.2582 \nF-statistic: 35.46 on 1 and 98 DF,  p-value: 4.068e-08\n\n\nWe can see that the X variable is significant. Notice the three start to the right.\nLet’s now plot the relation between these two variables.\n\nplot(mydata$X,mydata$Y)\n\n\n\n\nThere is a positive correlation between Y, the dependent variable, and X, the independent variable.\nNow let’s evaluate if the model is a valid model\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.3     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.3     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\npar(mfrow = c(2,2))\n\nplot(model)\n\n\n\n\nFirst, we call the library tidyverse which has this plot command to evaluate the feasibility of our model.\nThe top right graph shows that the residuals vs fitted values are randomly distributed, with a minimal deviation from the horizontal line.\nThe next graph to the right is the Q-Q plot. Q_Q plot checks the linearity of the data. If the points are all close to the line that is a good validation of the model.\nThe other two graphs will show and highlight the outliers and high-leverage points."
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "Welcome to my Blog! I hope you will find it interesting."
+  }
+]
