@@ -8,6 +8,8 @@ image: "team_work.jpg"
 
 ## Cross validation
 
+Hello today I am going to talk about cross validation.
+
 ```{r, echo=TRUE}
 
 library(caret)
