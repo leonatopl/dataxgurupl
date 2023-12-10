@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Welcome to my dataxguru Blog - paloma leonato</title>
+<title>Welcome to my dataxguru Blog - projects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,12 +30,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -60,43 +57,12 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -114,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">Home-blog</span></a>
   </li>  
   <li class="nav-item">
@@ -122,7 +88,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">resume</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html" rel="" target="">
+    <a class="nav-link active" href="./projects.html" rel="" target="" aria-current="page">
  <span class="menu-text">projects</span></a>
   </li>  
 </ul>
@@ -154,203 +120,84 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">paloma leonato</h1>
-                      </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="R">R <span class="quarto-category-count">(4)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cross validation">cross validation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="regression">regression <span class="quarto-category-count">(3)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<div class="quarto-about-jolla">
+  <img src="profile.jpg" class="about-image
+  round " style="height: 15em; width: 15em;">
+ <header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">projects</h1>
+</div>
+<div class="quarto-title-meta">
+  </div>
+</header><main class="content" id="quarto-document-content">
+<section id="classification-of-potential-donors-and-prediction-of-gift-amount" class="level3">
+<h3 data-anchor-id="classification-of-potential-donors-and-prediction-of-gift-amount"><strong><em>Classification of potential Donors and prediction of Gift Amount:</em></strong></h3>
+<p>begin{left}We have been approached by a non-profit organization to build a classification and predictive model that will be used to increase the cost-effectiveness of their current direct marketing campaign. The organization has provided data with a historical background to its direct marketing campaign. Personalized address mailers are sent out to previous donors for $2.00; the average donation gift amount is $14.50 from respondents. However, the campaign is operating at a loss due to low donation rates of 10%. The organization would like for us to take a provided dataset of prior donors to create our analytical models in order to make their direct marketing campaign not operate at a loss.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fundraising2.jpg" class="img-fluid figure-img" width="235"></p>
+</figure>
+</div>
+<p>We assess the potential profit of our study by using the adjusted confusion matrix from the ensemble classification model with the average donation amount from the AutoNeural validation model to calculate various profit-losses, considering with and without opportunity costs. We will then use the percentages of the adjusted confusion matrix to estimate the profit or loss generated by the score data results. We will also consider the lift provided by the score data.</p>
+<p>The resulting profit from our model, based on the validation classification data with the score donation value, was $1,695.65. We ignore the opportunity cost from false negatives in our profit evaluation.</p>
+</section>
+<section id="forecast-model-to-predict-the-demand-of-covit-19-vaccine" class="level3">
+<h3 data-anchor-id="forecast-model-to-predict-the-demand-of-covit-19-vaccine"><strong><em>Forecast model to predict the demand of Covit-19 vaccine</em></strong></h3>
+<p>According to the World Health Organization, Covid-19 is an infectious disease that cause symptoms such as fever, cough, tiredness, and loss of taste or smell. The World Health Organization stated that anyone can get sick with the virus and become extremely sick or die at any age. Covid-19 outbreak goes back to late December 2019 in Wuhan, Hubei, China as mentioned by (Wu et al., 2020). Moreover, (Ybarra, 2022) added that some Covid-19 cases suffer from something called long-term Covid which means some Covid-19 symptoms affect parts of the body such as the lungs, causing trouble in breathing, harsh cough, and shortness of breath. More than a year ago, a vaccine was derived against the Covid-19 virus. 4.4 billion people have had one or more doses, which represents 56% of the world’s population (Mallapaty et al., 2021). In this project, we will study the vaccination process in California and try to predict the booster-eligible population in all California counties.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="covid1.JPG" class="img-fluid figure-img" width="312"></p>
+</figure>
+</div>
+<p>I worked on a model to calculate the demand for vaccines in the state of California. Two models were presented aggregating the data in monthly buckets with 12-month lags as independent variables. In the second model, the data was aggregated in weekly buckets with 4-week lags as independent variables. The data was split into two datasets without breaking the sequence of the dataset, training with 65% of the data and testing with 35% of the remaining values in the dataset. The model was trained using a linear regression algorithm.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="for_covid.png" class="img-fluid figure-img" width="325"></p>
+</figure>
+</div>
+<p>I recommended the model with weekly buckets to provide accurate predictions of future demand.</p>
+</section>
+<section id="salaries-foreign-born-vs-native-in-texas." class="level3">
+<h3 data-anchor-id="salaries-foreign-born-vs-native-in-texas."><strong><em>Salaries, Foreign born vs Native in Texas.</em></strong></h3>
+<p>In this project, we evaluate the attributes that influence a worker’s salary in Texas. We proceed with analytics of the data including data exploration and data cleansing.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="salary_dis.jpg" class="img-fluid figure-img" width="281"></p>
+</figure>
+</div>
+<p>Deep understanding of SCOR model, Lean six-sigma DMAIC methodology, costing/forecasting, process mapping, profitability analysis tools, supply chains, and operations planning. The main attributes evaluated were place of birth, jobs, occupations, income,sex, and educational attainment. For this project we used Google Big Query, Python linear regression, and decision tree in SAS.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="salary.png" class="img-fluid figure-img" width="211"></p>
+</figure>
+</div>
+<p>The best salary among the four males was predicted for a foreign male with a graduate degree who runs his own business.</p>
 
 
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="R,regression,analysis" data-listing-date-sort="1700373600000" data-listing-file-modified-sort="1702250376044" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/Benefits of pca/index.html"> <img src="./posts/Benefits of pca/pic_anal.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Benefits of pca/index.html">
-<h3 class="no-anchor listing-title">
-Benefits of PCA
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('regression'); return false;">
-regression
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
+</section>
+</main> 
+  <hr class="about-sep">
+   <div class="about-links">
+  <a href="https://twitter.com/pleonato" class="about-link" rel="" target="">
+    <i class="bi bi-twitter"></i>
+     <span class="about-link-text">Twitter</span>
+  </a>
+  <a href="https://linkedin.com/pleonato" class="about-link" rel="" target="">
+    <i class="bi bi-linkedin"></i>
+     <span class="about-link-text">LinkedIn</span>
+  </a>
+  <a href="https://github.com/leonatopl" class="about-link" rel="" target="">
+    <i class="bi bi-github"></i>
+     <span class="about-link-text">Github</span>
+  </a>
 </div>
 </div>
-<a href="./posts/Benefits of pca/index.html">
-<div class="listing-description">
-It is advised to eliminate low-variance predictors and any constant predictors since those have less predictive power. Those could sometimes cause the model to crash due to…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Benefits of pca/index.html">
-<div class="listing-date">
-Nov 19, 2023
-</div>
-<div class="listing-author">
-paloma leonato
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="R,regression,cross validation" data-listing-date-sort="1700373600000" data-listing-file-modified-sort="1701127475181" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/crossvalidation/crossvalidation.html"> <img src="./posts/crossvalidation/team_work.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/crossvalidation/crossvalidation.html">
-<h3 class="no-anchor listing-title">
-Cross Validation
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('regression'); return false;">
-regression
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cross validation'); return false;">
-cross validation
-</div>
-</div>
-<a href="./posts/crossvalidation/crossvalidation.html">
-<div class="listing-description">
-Hello today I am going to talk about cross validation. Cross validation will provide….
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/crossvalidation/crossvalidation.html">
-<div class="listing-date">
-Nov 19, 2023
-</div>
-<div class="listing-author">
-paloma leonato
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="R,regression,analysis" data-listing-date-sort="1700373600000" data-listing-file-modified-sort="1701815626392" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/my-first-post/index.html"> <img src="./posts/my-first-post/pic_anal.jpg" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/my-first-post/index.html">
-<h3 class="no-anchor listing-title">
-Evaluate your Model Quality
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('regression'); return false;">
-regression
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-</div>
-<a href="./posts/my-first-post/index.html">
-<div class="listing-description">
-This is a post with executable code.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/my-first-post/index.html">
-<div class="listing-date">
-Nov 19, 2023
-</div>
-<div class="listing-author">
-paloma leonato
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="R" data-listing-date-sort="1700114400000" data-listing-file-modified-sort="1702250395056" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/welcome/index.html"> <p class="card-img-top"><img src="posts\welcome\picblog3.jpg"  class="thumbnail-image card-img"/></p> </a></p>
-</div>
-<div class="body">
-<a href="./posts/welcome/index.html">
-<h3 class="no-anchor listing-title">
-Welcome To My Blog
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('R'); return false;">
-R
-</div>
-</div>
-<a href="./posts/welcome/index.html">
-<div class="listing-description">
-Welcome to my Blog! In this blob I am sharing my learning experience with R and Python. I hope you will find it interesting.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html">
-<div class="listing-date">
-Nov 16, 2023
-</div>
-<div class="listing-author">
-paloma leonato
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+ <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -371,13 +218,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

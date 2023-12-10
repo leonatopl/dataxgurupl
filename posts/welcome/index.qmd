@@ -5,6 +5,6 @@ date: "2023-11-16"
 categories: [R]
 ---
 
-Welcome to my Blog! I hope you will find it interesting.
+Welcome to my Blog! In this blob I am sharing my learning experience with R and Python. I hope you will find it interesting.
 
-![](picblog2.jpg)
+![](picblog3.jpg)

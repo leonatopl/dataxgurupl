@@ -1,5 +1,5 @@
 ---
-title: "Post Estimation Diagnostics"
+title: "Evaluate your Model Quality"
 author: "paloma leonato"
 date: "2023-11-19"
 categories: [R, regression, analysis]

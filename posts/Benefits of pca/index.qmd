@@ -1,0 +1,49 @@
+---
+title: "Benefits of PCA"
+author: "paloma leonato"
+date: "2023-11-19"
+categories: [R, regression, analysis]
+image: "pic_anal.jpg"
+---
+
+It is advised to eliminate low-variance predictors and any constant predictors since those have less predictive power. Those could sometimes cause the model to crash due to divisions by zero. An alternative to removing the lo-variance predictors is to evaluate PCA in your dataset. Those low-variance predictors could be combined as a PCA variable with a significant impact on your model, tremendously affecting the accuracy of the results.
+
+```{r, echo=TRUE}
+
+library(caret)
+
+data(mtcars)
+
+set.seed(1234)
+
+mtcars[sample(1:nrow(mtcars),10),"drat"] <- NA
+
+Y <- mtcars$mpg
+
+X<- mtcars[,3:5]
+
+X$newx <- 2
+
+
+model0 <- train(
+  y = Y,
+  x = X, 
+  method="glm",
+  preProcess = c("nzv","center","scale")
+)
+               
+summary(model0)
+
+
+model <- train(
+  y = Y,
+  x = X, 
+  method="glm",
+  preProcess = c("zv","center","scale","pca")
+)
+               
+summary(model)
+
+```
+
+The PCA option will scale and center the data and then combine the low-variance variables in the preprocess argument, ensuring that all the predictors are orthogonal, reducing the risk of multicollinearity. This might improve the accuracy of your model

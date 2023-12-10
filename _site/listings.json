@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/Benefits of pca/index.html",
       "/posts/crossvalidation/crossvalidation.html",
       "/posts/my-first-post/index.html",
       "/posts/welcome/index.html"

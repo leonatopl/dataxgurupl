@@ -12,6 +12,11 @@ website:
         href: https://twitter.com/pleonato
       - icon: linkedin
         href: https://linkedin.com/pleonato
+    left:
+      - text: Home-blog
+        file: index.qmd
+      - resume.qmd
+      - projects.qmd
 format:
   html:
     theme: cosmo
