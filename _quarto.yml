@@ -17,6 +17,7 @@ website:
         file: index.qmd
       - resume.qmd
       - projects.qmd
+  google-analytics: "G-L4WJJ84KT0"
 format:
   html:
     theme: cosmo
