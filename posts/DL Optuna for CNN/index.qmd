@@ -1,0 +1,25 @@
+---
+title: "CNN Optuna"
+author: "paloma leonato"
+date: "2025-01-03"
+categories: [R, regression, analysis]
+image: "CNN.png"
+---
+
+Optuna is a powerful open-source framework that automates the process of finding the best hyperparameters for deep learning (DL) models. By intelligently sampling and evaluating different sets of hyperparameters, Optuna identifies configurations that maximize model performance (e.g., accuracy, F1-score) or minimize loss. This iterative process significantly reduces the time and effort required to manually tune hyperparameters, leading to improved model performance and faster development cycles.
+
+![](images/optuna1.jpg){fig-align="center"}
+
+![](images/optuna2.jpg){fig-align="center"}
+
+**Efficiency:** Optuna's intelligent search algorithms efficiently explore the hyperparameter space, finding optimal configurations faster than manual grid search or random search.
+
+**Flexibility:** Supports a wide range of hyperparameters, including learning rate, batch size, number of layers, activation functions, and more.
+
+**Scalability:** Can be easily parallelized and distributed across multiple machines, accelerating the optimization process for computationally expensive models.
+
+Ease of use: Provides a user-friendly API with clear documentation and examples, making it easy to integrate into existing DL workflows.
+
+By leveraging Optuna, researchers and practitioners can significantly improve the performance of their DL models, leading to more accurate predictions, faster training times, and ultimately, better outcomes in their applications.
+
+The PCA option will scale and center the data and then combine the low-variance variables in the preprocess argument, ensuring that all the predictors are orthogonal, reducing the risk of multicollinearity. This might improve the accuracy of your model
