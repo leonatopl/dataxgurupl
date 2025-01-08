@@ -13,6 +13,7 @@ about:
     - icon: github
       text: Github
       href: https://github.com/leonatopl
+google-analytics: "G-L4WJJ84KT0"
 ---
 
 ### ***Neural Network Recession Prediction Indicator:***
