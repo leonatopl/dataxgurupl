@@ -15,6 +15,42 @@ about:
       href: https://github.com/leonatopl
 ---
 
+### ***Neural Network Recession Prediction Indicator:***
+
+Economic cycles affect the financial well-being of the US and the world population. A downturn can negatively impact the populace. Inflation causes purchasing power to decrease. When unemployment rises, people lose their ability to meet their financial borrowers are unable to stay current.
+
+This is the ideal time for us to create a model to predict the future state of the economy. Economic anomalies exist that make this hard to predict. There are geopolitical factors that have influence over the future of the economy, including the elections in the United States. There is also a wide range of opinions from economists.
+
+Machine learning (ML) models are increasingly replacing traditional statistical models due to their ability to analyze vast amounts of data and multiple variables, resulting in more reliable outcomes.
+
+![](images/Picture8.jpg){fig-align="center"}
+
+Our objective is to predict if a recession is going to happen in the next six months. We have four scenarios that we define for our target variable:no recession in the next six months, mild recession will begin in the next six months, moderate recession will start in the next six months and will last between six and twelve months,and deep recession will start in the next six months. This will last between twelve and thirty-six months.
+
+We assess the normalization of the final 43 selected variables.
+
+![](images/normal.jpg){fig-align="center"}
+
+We consider it critical to have a split records in training and testing where we keep the distribution of the classes. For that, we imported the train_test_split method from the sklearn.model_selection library. This ensures that the distribution of the training and test is the same. We believe that this split is critical to design a robust model. In the above figure, we can see the distribution of the class for the test dataset, in yellow, after the split. We can see the same distribution in a reduced number of records for the test dataset.
+
+![](images/Picture13.jpg){fig-align="center"}
+
+There are three possible models that we could use fully connected (FC), convolutional (CNN), and recurrent neural network (RNN) , even though we understand that recurrent neural networks are the most suitable for serial data, we didn\'t want to limit our study to one model and work with an approach that evaluated all possible alternatives.
+
+![](images/aproach.jpg){fig-align="center"}
+
+With the CNN, we proceeded with further optimization using maxpooling and different no-saturated activation functions like ReLU and LeakyReLU. We use max-pooling because, during our data exploration, we identify extreme values that might be captured in max-pooling. This layer also reduces the dimension, improving performance and lowering cost. The best results were with the leakyReLU activation function and maxpooling with 99% F1 score.
+
+In this study, we developed a comprehensive machine learning model to predict the likelihood and severity of upcoming recessions. We selected this thesis due to the uncertainty of the current economic environment. Using a 36-month look-back period and 43 economic indicators, our model offers a significant advancement over existing predictive methodologies.
+
+We evaluated FC, CNN, RNN and LSTM models and different window sizes with different slides: 30-day window sizes with a 10-day slide to predict the recession index for the 30th day. Then only for the RNN and LSTM we evaluate the following cases: a 30-day window with a 10-day slide to predict the recession index for the 60th day and a 60-day window with a 30-day slide to predict the recession index for the 90th day. For each neural network model, We developed a simple base model, tried every scheduler and optimizer and selected the best result, and with those, we ran Optuna to find the best hyperparameters with 75 trials. In the following graph we are just showing the Optuna model for all the different combinations.
+
+![](images/Model1.jpg){fig-align="center"}
+
+![](images/Model2.jpg){fig-align="center"}
+
+After evaluating all the models, we identified the need for additional data to develop a model that has a higher number of rolling days and can predict future recession indexes. We got the best result with the CNN, but this one requires a longer processing time, which will increase cost. RNN and LSTM are the best alternatives; although both drop the F1 scores with a limited number of training data, the stability of these models is remarkable. Also, we are concerned about overfitting, and we recommend early stopping and exploring data augmentation with synthetic data generation. There are two possible techniques: SMOTE (Synthetic Minority Over-sampling Technique) and GANs (Generative Adversarial Networks), to create synthetic data that mimics the characteristics of the historical records. The alternative will be to go back in history, although we are concerned that some of the variables might not be available if we go back too many years.
+
 ### ***Factors that Influence Health: US Life Expectancy:***
 
 Life expectancy is a vital indicator that provides insight regarding a population\'s overall health, and it serves as one of the core indicators of calculating the United Nations Human Development Index across countries. According to the World Health Organization data, life expectancy at birth in the United States is 78.5 years for both sexes in 2019; but when compared to other high-income countries, the United States\'s life expectancy measured to be 2.4 years lower and ranked 40th in the world (World Health Organization, 2019).
