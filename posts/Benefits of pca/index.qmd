@@ -2,7 +2,7 @@
 title: "Benefits of PCA"
 author: "paloma leonato"
 date: "2023-11-19"
-categories: [R, regression, analysis]
+categories: [R, Regression, analysis]
 image: "pic_anal.jpg"
 ---
 
