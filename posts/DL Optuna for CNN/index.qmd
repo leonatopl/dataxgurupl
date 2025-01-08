@@ -2,7 +2,7 @@
 title: "CNN Optuna"
 author: "paloma leonato"
 date: "2025-01-03"
-categories: [R, regression, analysis]
+categories: [Python, DL, Model]
 image: "CNN.png"
 ---
 
