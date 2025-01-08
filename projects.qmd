@@ -15,9 +15,41 @@ about:
       href: https://github.com/leonatopl
 ---
 
+### ***Factors that Influence Health: US Life Expectancy:***
+
+Life expectancy is a vital indicator that provides insight regarding a population\'s overall health, and it serves as one of the core indicators of calculating the United Nations Human Development Index across countries. According to the World Health Organization data, life expectancy at birth in the United States is 78.5 years for both sexes in 2019; but when compared to other high-income countries, the United States\'s life expectancy measured to be 2.4 years lower and ranked 40th in the world (World Health Organization, 2019).
+
+![](images/lifeExp_hist.png){fig-align="center"}
+
+![](images/life_exp_byST.jpg){fig-align="center"}
+
+With life expectancy being a primary indicator for a population\'s overall health, this project aims to determine how lifestyle and socio-economic factors have impacted life expectancy and its disparities among counties (minimum geographical location) within the United States between the years of 2019 to 2023.
+
+![](images/corr.jpg){fig-align="center"}
+
+The data used in our study revealed the impact of location on life expectancy. The South region had poor lifestyle behaviors, as we observed from the graphs. As we learned from the literature review, physical and social environments in which people live helped determine the quality of life and the life expectancy. The South region was more rural, less educated, and had the highest percentage of poverty. Comparatively, the West region had the highest life expectancy and was on the other side of the spectrum of the South region for the variables in the study. We also observed during the exploration of the data the South region is the region with the lowest life expectancy with an average of 76.07, while the West region had an average life expectancy about three years higher, in the range of 79.15.
+
+![](images/byRegion.jpg){fig-align="center"}
+
+![](images/byregion2.jpg){fig-align="center"}
+
+While evaluating the validity of the model, we observed that the residuals were randomly distributed. However, in the QQ plot, we observed tails with high curvature, specifically to the right, which reveals the presence of extreme outliers.
+
+![](images/QQplot.jpg){fig-align="center"}
+
+The Residuals vs Leverage graph did not show the presence of any high leverage points. We calculated the Full Model and best subset model, eliminating the outliers, and assessed the validity of the model again.
+
+The R-squared and adjusted R-squared improve from 0.6851 to 0.7798
+
+Lasso approach used a shrinkage technique that would significantly reduce the variance. Lasso eliminated the same variables that were found in the stepwise approach. Evaluating the MSPE and comparing it with the cross-validation ten-fold for both full model and bestsubset model, we saw that Lasso provided a lower MSPE. 
+
+![](images/Lasso.jpg){fig-align="center"}
+
+To evaluate the health factor that contributes the most to life expectancy, we picked the Lasso model because it has the lowest Error MSPE = 3.027 and is the model that predicts the average life expectancy in the US more accurately. 
+
+![](images/Lasso_results.jpg){fig-align="center"}
 
 ### ***Classification of potential Donors and prediction of Gift Amount:***
-
 
 begin{left}We have been approached by a non-profit organization to build a classification and predictive model that will be used to increase the cost-effectiveness of their current direct marketing campaign. The organization has provided data with a historical background to its direct marketing campaign. Personalized address mailers are sent out to previous donors for \$2.00; the average donation gift amount is \$14.50 from respondents. However, the campaign is operating at a loss due to low donation rates of 10%. The organization would like for us to take a provided dataset of prior donors to create our analytical models in order to make their direct marketing campaign not operate at a loss.
 
