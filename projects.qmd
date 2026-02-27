@@ -24,11 +24,15 @@ google-analytics: "G-L4WJJ84KT0"
 
 -   **Technology Adoption Phase:** Cryptocurrencies are estimated to be starting at the steepest point of the adoption S-curve, with an estimated eight years of exceptional returns remaining before maturity. AI is estimated to be at 35% adoption (the "early majority" phase), with about five years of rapid adoption remaining.
 
-    ![](images/Technology_adoption.png)
+```         
+![](images/Technology_adoption.png)
+```
 
 -   **Macroeconomic Impact:** Unlike mature assets (like traditional stocks), pure-play AI (e.g., NVIDIA) and cryptocurrencies have low or negative correlations to macroeconomic variables like inflation (CPI) and money supply. Their prices are currently driven by rapid adoption rather than macro-economy health.
 
-    ![](images/Sector correlation.png)
+```         
+![](images/Sector correlation.png)
+```
 
 **3. Forecasting Framework and Modeling** The project evaluates various deep learning architectures (Fully Connected, RNN, LSTM, GRU, CNN, and their bidirectional variants) to forecast Apple stock prices as a baseline model that could eventually be applied to other assets. The forecasting was divided into three time horizons using a sliding window approach:
 
