@@ -149,25 +149,22 @@ gtag('config', 'G-L4WJJ84KT0', { 'anonymize_ip': true});
 <p><strong>1. Core Objectives</strong> The primary goal of this project is to determine where emerging technologies specifically Artificial Intelligence (AI) and cryptocurrencies (decentralization) currently sit on the technology adoption lifecycle. The authors aim to forecast the potential prices of these assets, identify good market entry and exit points, and determine if macro-economic factors impact these nascent asset classes differently than traditional mature investments.</p>
 <p><strong>2. Exploratory Data Analysis (EDA) and Market Insights</strong> The authors analyzed a dataset spanning from 2000 to 2025, comparing AI and cryptocurrencies against traditional stocks (like Apple), indexes, metals, and macroeconomic data (like M2 money supply and CPI). Key findings from the EDA include:</p>
 <ul>
-<li><strong>Technology Adoption Phase:</strong> Cryptocurrencies are estimated to be starting at the steepest point of the adoption S-curve, with an estimated eight years of exceptional returns remaining before maturity. AI is estimated to be at 35% adoption (the “early majority” phase), with about five years of rapid adoption remaining.</li>
+<li><p><strong>Technology Adoption Phase:</strong> Cryptocurrencies are estimated to be starting at the steepest point of the adoption S-curve, with an estimated eight years of exceptional returns remaining before maturity. AI is estimated to be at 35% adoption (the “early majority” phase), with about five years of rapid adoption remaining.</p>
+<p><img src="images/Technology_adoption-02.png" class="img-fluid"></p></li>
 </ul>
-<pre><code>![](images/Technology_adoption.png)</code></pre>
+<!-- -->
 <ul>
-<li><strong>Macroeconomic Impact:</strong> Unlike mature assets (like traditional stocks), pure-play AI (e.g., NVIDIA) and cryptocurrencies have low or negative correlations to macroeconomic variables like inflation (CPI) and money supply. Their prices are currently driven by rapid adoption rather than macro-economy health.</li>
+<li><p><strong>Macroeconomic Impact:</strong> Unlike mature assets (like traditional stocks), pure-play AI (e.g., NVIDIA) and cryptocurrencies have low or negative correlations to macroeconomic variables like inflation (CPI) and money supply. Their prices are currently driven by rapid adoption rather than macro-economy health.</p>
+<p><img src="images/Sector correlation-01.png" class="img-fluid"></p></li>
 </ul>
-<pre><code>![](images/Sector correlation.png)</code></pre>
 <p><strong>3. Forecasting Framework and Modeling</strong> The project evaluates various deep learning architectures (Fully Connected, RNN, LSTM, GRU, CNN, and their bidirectional variants) to forecast Apple stock prices as a baseline model that could eventually be applied to other assets. The forecasting was divided into three time horizons using a sliding window approach:</p>
-<ul>
-<li><p><strong>Long-term:</strong> 1-year windows predicting 1 year ahead (using data from 2009 onward).</p></li>
-<li><p><strong>Medium-term:</strong> 120-day windows predicting 6 months ahead (using data from 2014 onwar)</p></li>
-<li><p><strong>Short-term:</strong> 15-day windows predicting 3 weeks ahead (using data from 2020 onward).</p></li>
-</ul>
+<p><strong>Long-term:</strong> 1-year windows predicting 1 year ahead (using data from 2009 onward).</p>
+<p><strong>Medium-term:</strong> 120-day windows predicting 6 months ahead (using data from 2014 onwar)</p>
+<p><strong>Short-term:</strong> 15-day windows predicting 3 weeks ahead (using data from 2020 onward).</p>
 <p><strong>4. Key Model Results</strong> The models were benchmarked against a Naïve forecasting method.</p>
-<ul>
-<li><p>Simpler models (like standard RNN, GRU, and Bidirectional RNN/GRU) consistently outperformed highly complex models like LSTM and Bidirectional LSTM, which proved slow, difficult to tune, and prone to overfitting.</p></li>
-<li><p>For multivariable long-term forecasting, reducing dimensionality using Principal Component Analysis (PCA) successfully mitigated multicollinearity issues and improved model performance.</p></li>
-<li><p>Recommending carefully matching the model architecture and preprocessing strategy to the specific forecasting window is more important than simply utilizing the most complex neural network.</p></li>
-</ul>
+<p>Simpler models (like standard RNN, GRU, and Bidirectional RNN/GRU) consistently outperformed highly complex models like LSTM and Bidirectional LSTM, which proved slow, difficult to tune, and prone to overfitting.</p>
+<p>For multivariable long-term forecasting, reducing dimensionality using Principal Component Analysis (PCA) successfully mitigated multicollinearity issues and improved model performance.</p>
+<p>Recommending carefully matching the model architecture and preprocessing strategy to the specific forecasting window is more important than simply utilizing the most complex neural network.</p>
 </section>
 <section id="neural-network-recession-prediction-indicator" class="level3">
 <h3 data-anchor-id="neural-network-recession-prediction-indicator"><strong><em>Neural Network Recession Prediction Indicator:</em></strong></h3>

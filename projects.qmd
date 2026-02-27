@@ -24,31 +24,30 @@ google-analytics: "G-L4WJJ84KT0"
 
 -   **Technology Adoption Phase:** Cryptocurrencies are estimated to be starting at the steepest point of the adoption S-curve, with an estimated eight years of exceptional returns remaining before maturity. AI is estimated to be at 35% adoption (the "early majority" phase), with about five years of rapid adoption remaining.
 
-```         
-![](images/Technology_adoption.png)
-```
+    ![](images/Technology_adoption-02.png)
 
+```{=html}
+<!-- -->
+```
 -   **Macroeconomic Impact:** Unlike mature assets (like traditional stocks), pure-play AI (e.g., NVIDIA) and cryptocurrencies have low or negative correlations to macroeconomic variables like inflation (CPI) and money supply. Their prices are currently driven by rapid adoption rather than macro-economy health.
 
-```         
-![](images/Sector correlation.png)
-```
+    ![](images/Sector correlation-01.png)
 
 **3. Forecasting Framework and Modeling** The project evaluates various deep learning architectures (Fully Connected, RNN, LSTM, GRU, CNN, and their bidirectional variants) to forecast Apple stock prices as a baseline model that could eventually be applied to other assets. The forecasting was divided into three time horizons using a sliding window approach:
 
--   **Long-term:** 1-year windows predicting 1 year ahead (using data from 2009 onward).
+**Long-term:** 1-year windows predicting 1 year ahead (using data from 2009 onward).
 
--   **Medium-term:** 120-day windows predicting 6 months ahead (using data from 2014 onwar)
+**Medium-term:** 120-day windows predicting 6 months ahead (using data from 2014 onwar)
 
--   **Short-term:** 15-day windows predicting 3 weeks ahead (using data from 2020 onward).
+**Short-term:** 15-day windows predicting 3 weeks ahead (using data from 2020 onward).
 
 **4. Key Model Results** The models were benchmarked against a Naïve forecasting method.
 
--   Simpler models (like standard RNN, GRU, and Bidirectional RNN/GRU) consistently outperformed highly complex models like LSTM and Bidirectional LSTM, which proved slow, difficult to tune, and prone to overfitting.
+Simpler models (like standard RNN, GRU, and Bidirectional RNN/GRU) consistently outperformed highly complex models like LSTM and Bidirectional LSTM, which proved slow, difficult to tune, and prone to overfitting.
 
--   For multivariable long-term forecasting, reducing dimensionality using Principal Component Analysis (PCA) successfully mitigated multicollinearity issues and improved model performance.
+For multivariable long-term forecasting, reducing dimensionality using Principal Component Analysis (PCA) successfully mitigated multicollinearity issues and improved model performance.
 
--   Recommending carefully matching the model architecture and preprocessing strategy to the specific forecasting window is more important than simply utilizing the most complex neural network.
+Recommending carefully matching the model architecture and preprocessing strategy to the specific forecasting window is more important than simply utilizing the most complex neural network.
 
 ### ***Neural Network Recession Prediction Indicator:***
 
