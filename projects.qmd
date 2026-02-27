@@ -16,6 +16,36 @@ about:
 google-analytics: "G-L4WJJ84KT0"
 ---
 
+### ***Comparing Assets within Technology Adoption: Forecast Framework***
+
+**1. Core Objectives** The primary goal of this project is to determine where emerging technologies specifically Artificial Intelligence (AI) and cryptocurrencies (decentralization) currently sit on the technology adoption lifecycle. The authors aim to forecast the potential prices of these assets, identify good market entry and exit points, and determine if macro-economic factors impact these nascent asset classes differently than traditional mature investments.
+
+**2. Exploratory Data Analysis (EDA) and Market Insights** The authors analyzed a dataset spanning from 2000 to 2025, comparing AI and cryptocurrencies against traditional stocks (like Apple), indexes, metals, and macroeconomic data (like M2 money supply and CPI). Key findings from the EDA include:
+
+-   **Technology Adoption Phase:** Cryptocurrencies are estimated to be starting at the steepest point of the adoption S-curve, with an estimated eight years of exceptional returns remaining before maturity. AI is estimated to be at 35% adoption (the "early majority" phase), with about five years of rapid adoption remaining.
+
+    ![](images/Technology_adoption.png)
+
+-   **Macroeconomic Impact:** Unlike mature assets (like traditional stocks), pure-play AI (e.g., NVIDIA) and cryptocurrencies have low or negative correlations to macroeconomic variables like inflation (CPI) and money supply. Their prices are currently driven by rapid adoption rather than macro-economy health.
+
+    ![](images/Sector correlation.png)
+
+**3. Forecasting Framework and Modeling** The project evaluates various deep learning architectures (Fully Connected, RNN, LSTM, GRU, CNN, and their bidirectional variants) to forecast Apple stock prices as a baseline model that could eventually be applied to other assets. The forecasting was divided into three time horizons using a sliding window approach:
+
+-   **Long-term:** 1-year windows predicting 1 year ahead (using data from 2009 onward).
+
+-   **Medium-term:** 120-day windows predicting 6 months ahead (using data from 2014 onwar)
+
+-   **Short-term:** 15-day windows predicting 3 weeks ahead (using data from 2020 onward).
+
+**4. Key Model Results** The models were benchmarked against a Naïve forecasting method.
+
+-   Simpler models (like standard RNN, GRU, and Bidirectional RNN/GRU) consistently outperformed highly complex models like LSTM and Bidirectional LSTM, which proved slow, difficult to tune, and prone to overfitting.
+
+-   For multivariable long-term forecasting, reducing dimensionality using Principal Component Analysis (PCA) successfully mitigated multicollinearity issues and improved model performance.
+
+-   Recommending carefully matching the model architecture and preprocessing strategy to the specific forecasting window is more important than simply utilizing the most complex neural network.
+
 ### ***Neural Network Recession Prediction Indicator:***
 
 Economic cycles affect the financial well-being of the US and the world population. A downturn can negatively impact the populace. Inflation causes purchasing power to decrease. When unemployment rises, people lose their ability to meet their financial borrowers are unable to stay current.
@@ -36,7 +66,7 @@ We consider it critical to have a split records in training and testing where we
 
 ![](images/Picture13.jpg){fig-align="center"}
 
-There are three possible models that we could use fully connected (FC), convolutional (CNN), and recurrent neural network (RNN) , even though we understand that recurrent neural networks are the most suitable for serial data, we didn\'t want to limit our study to one model and work with an approach that evaluated all possible alternatives.
+There are three possible models that we could use fully connected (FC), convolutional (CNN), and recurrent neural network (RNN) , even though we understand that recurrent neural networks are the most suitable for serial data, we didn't want to limit our study to one model and work with an approach that evaluated all possible alternatives.
 
 ![](images/aproach.jpg){fig-align="center"}
 
@@ -54,13 +84,13 @@ After evaluating all the models, we identified the need for additional data to d
 
 ### ***Factors that Influence Health: US Life Expectancy:***
 
-Life expectancy is a vital indicator that provides insight regarding a population\'s overall health, and it serves as one of the core indicators of calculating the United Nations Human Development Index across countries. According to the World Health Organization data, life expectancy at birth in the United States is 78.5 years for both sexes in 2019; but when compared to other high-income countries, the United States\'s life expectancy measured to be 2.4 years lower and ranked 40th in the world (World Health Organization, 2019).
+Life expectancy is a vital indicator that provides insight regarding a population's overall health, and it serves as one of the core indicators of calculating the United Nations Human Development Index across countries. According to the World Health Organization data, life expectancy at birth in the United States is 78.5 years for both sexes in 2019; but when compared to other high-income countries, the United States's life expectancy measured to be 2.4 years lower and ranked 40th in the world (World Health Organization, 2019).
 
 ![](images/lifeExp_hist.png){fig-align="center"}
 
 ![](images/life_exp_byST.jpg){fig-align="center"}
 
-With life expectancy being a primary indicator for a population\'s overall health, this project aims to determine how lifestyle and socio-economic factors have impacted life expectancy and its disparities among counties (minimum geographical location) within the United States between the years of 2019 to 2023.
+With life expectancy being a primary indicator for a population's overall health, this project aims to determine how lifestyle and socio-economic factors have impacted life expectancy and its disparities among counties (minimum geographical location) within the United States between the years of 2019 to 2023.
 
 ![](images/corr.jpg){fig-align="center"}
 

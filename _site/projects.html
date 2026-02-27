@@ -144,6 +144,29 @@ gtag('config', 'G-L4WJJ84KT0', { 'anonymize_ip': true});
 <div class="quarto-title-meta">
   </div>
 </header><main class="content" id="quarto-document-content">
+<section id="comparing-assets-within-technology-adoption-forecast-framework" class="level3">
+<h3 data-anchor-id="comparing-assets-within-technology-adoption-forecast-framework"><strong><em>Comparing Assets within Technology Adoption: Forecast Framework</em></strong></h3>
+<p><strong>1. Core Objectives</strong> The primary goal of this project is to determine where emerging technologies specifically Artificial Intelligence (AI) and cryptocurrencies (decentralization) currently sit on the technology adoption lifecycle. The authors aim to forecast the potential prices of these assets, identify good market entry and exit points, and determine if macro-economic factors impact these nascent asset classes differently than traditional mature investments.</p>
+<p><strong>2. Exploratory Data Analysis (EDA) and Market Insights</strong> The authors analyzed a dataset spanning from 2000 to 2025, comparing AI and cryptocurrencies against traditional stocks (like Apple), indexes, metals, and macroeconomic data (like M2 money supply and CPI). Key findings from the EDA include:</p>
+<ul>
+<li><p><strong>Technology Adoption Phase:</strong> Cryptocurrencies are estimated to be starting at the steepest point of the adoption S-curve, with an estimated eight years of exceptional returns remaining before maturity. AI is estimated to be at 35% adoption (the “early majority” phase), with about five years of rapid adoption remaining.</p>
+<p><img src="images/Technology_adoption.png" class="img-fluid"></p></li>
+<li><p><strong>Macroeconomic Impact:</strong> Unlike mature assets (like traditional stocks), pure-play AI (e.g., NVIDIA) and cryptocurrencies have low or negative correlations to macroeconomic variables like inflation (CPI) and money supply. Their prices are currently driven by rapid adoption rather than macro-economy health.</p>
+<p><img src="images/Sector correlation.png" class="img-fluid"></p></li>
+</ul>
+<p><strong>3. Forecasting Framework and Modeling</strong> The project evaluates various deep learning architectures (Fully Connected, RNN, LSTM, GRU, CNN, and their bidirectional variants) to forecast Apple stock prices as a baseline model that could eventually be applied to other assets. The forecasting was divided into three time horizons using a sliding window approach:</p>
+<ul>
+<li><p><strong>Long-term:</strong> 1-year windows predicting 1 year ahead (using data from 2009 onward).</p></li>
+<li><p><strong>Medium-term:</strong> 120-day windows predicting 6 months ahead (using data from 2014 onwar)</p></li>
+<li><p><strong>Short-term:</strong> 15-day windows predicting 3 weeks ahead (using data from 2020 onward).</p></li>
+</ul>
+<p><strong>4. Key Model Results</strong> The models were benchmarked against a Naïve forecasting method.</p>
+<ul>
+<li><p>Simpler models (like standard RNN, GRU, and Bidirectional RNN/GRU) consistently outperformed highly complex models like LSTM and Bidirectional LSTM, which proved slow, difficult to tune, and prone to overfitting.</p></li>
+<li><p>For multivariable long-term forecasting, reducing dimensionality using Principal Component Analysis (PCA) successfully mitigated multicollinearity issues and improved model performance.</p></li>
+<li><p>Recommending carefully matching the model architecture and preprocessing strategy to the specific forecasting window is more important than simply utilizing the most complex neural network.</p></li>
+</ul>
+</section>
 <section id="neural-network-recession-prediction-indicator" class="level3">
 <h3 data-anchor-id="neural-network-recession-prediction-indicator"><strong><em>Neural Network Recession Prediction Indicator:</em></strong></h3>
 <p>Economic cycles affect the financial well-being of the US and the world population. A downturn can negatively impact the populace. Inflation causes purchasing power to decrease. When unemployment rises, people lose their ability to meet their financial borrowers are unable to stay current.</p>
@@ -167,7 +190,7 @@ gtag('config', 'G-L4WJJ84KT0', { 'anonymize_ip': true});
 <p><img src="images/Picture13.jpg" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>There are three possible models that we could use fully connected (FC), convolutional (CNN), and recurrent neural network (RNN) , even though we understand that recurrent neural networks are the most suitable for serial data, we didn't want to limit our study to one model and work with an approach that evaluated all possible alternatives.</p>
+<p>There are three possible models that we could use fully connected (FC), convolutional (CNN), and recurrent neural network (RNN) , even though we understand that recurrent neural networks are the most suitable for serial data, we didn’t want to limit our study to one model and work with an approach that evaluated all possible alternatives.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/aproach.jpg" class="img-fluid figure-img"></p>
@@ -190,7 +213,7 @@ gtag('config', 'G-L4WJJ84KT0', { 'anonymize_ip': true});
 </section>
 <section id="factors-that-influence-health-us-life-expectancy" class="level3">
 <h3 data-anchor-id="factors-that-influence-health-us-life-expectancy"><strong><em>Factors that Influence Health: US Life Expectancy:</em></strong></h3>
-<p>Life expectancy is a vital indicator that provides insight regarding a population's overall health, and it serves as one of the core indicators of calculating the United Nations Human Development Index across countries. According to the World Health Organization data, life expectancy at birth in the United States is 78.5 years for both sexes in 2019; but when compared to other high-income countries, the United States's life expectancy measured to be 2.4 years lower and ranked 40th in the world (World Health Organization, 2019).</p>
+<p>Life expectancy is a vital indicator that provides insight regarding a population’s overall health, and it serves as one of the core indicators of calculating the United Nations Human Development Index across countries. According to the World Health Organization data, life expectancy at birth in the United States is 78.5 years for both sexes in 2019; but when compared to other high-income countries, the United States’s life expectancy measured to be 2.4 years lower and ranked 40th in the world (World Health Organization, 2019).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/lifeExp_hist.png" class="img-fluid figure-img"></p>
@@ -201,7 +224,7 @@ gtag('config', 'G-L4WJJ84KT0', { 'anonymize_ip': true});
 <p><img src="images/life_exp_byST.jpg" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>With life expectancy being a primary indicator for a population's overall health, this project aims to determine how lifestyle and socio-economic factors have impacted life expectancy and its disparities among counties (minimum geographical location) within the United States between the years of 2019 to 2023.</p>
+<p>With life expectancy being a primary indicator for a population’s overall health, this project aims to determine how lifestyle and socio-economic factors have impacted life expectancy and its disparities among counties (minimum geographical location) within the United States between the years of 2019 to 2023.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/corr.jpg" class="img-fluid figure-img"></p>
